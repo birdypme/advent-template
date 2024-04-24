@@ -19,13 +19,20 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Advent of Code 20xx"
 fit_content = true
 autowrap_mode = 0
+
+[node name="Home" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Home"
 
 [node name="DayTitle" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -34,3 +41,5 @@ size_flags_vertical = 4
 text = "Day x"
 fit_content = true
 autowrap_mode = 0
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
