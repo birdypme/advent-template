@@ -42,4 +42,6 @@ text = "Day x"
 fit_content = true
 autowrap_mode = 0
 
+[node name="Templates" type="Node2D" parent="."]
+
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
